@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ICCC2016</string>
+    <string name="title_activity_hotel_and_travel">Hotel/Travel</string>
+    <string name="action_settings">Settings</string>
+    <string name="fragment_hotel_title1">Hotel Information</string>
+    <string name="fragment_hotel_title2">About the Hotel</string>
+    <string name="fragment_hotel_title3">GROUND TRANSPORTATION</string>
+    <string name="title_activity_program">Programs</string>
+    <string name="icon_font_welcome">&#xe6c8;</string>
+    <string name="icon_font_program">&#xe614;</string>
+    <string name="icon_font_map">&#xe626;</string>
+    <string name="icon_font_patrons">&#xe6ea;</string>
+    <string name="icon_font_commitee">&#xe6bd;</string>
+    <string name="icon_font_hotel_and_travel">&#xe71f;</string>
+    <string name="icon_font_message">&#xe645;</string>
+    <string name="icon_font_version_update">&#xe60f;</string>
+
+
+
+</resources>
