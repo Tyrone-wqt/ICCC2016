@@ -22,9 +22,13 @@
         <activity
             android:name=".wqt.ProgramActivity"
             android:label="@string/title_activity_program"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".wqt.ShowPicActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".wqt.PatronActivity"
+            android:label="@string/title_activity_patron"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
