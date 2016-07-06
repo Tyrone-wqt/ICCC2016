@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_margin="5dip"
+        android:layout_marginBottom="5dip"
         android:checkedButton="@+id/radio_button_left"
         android:orientation="horizontal">
 
@@ -57,6 +58,11 @@
             android:textColor="@color/colorRadio" />
     </com.example.wqt.iccc2016.wqt.Radio.SegmentedRadioGroup>
 
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorDividerBg"
+        android:layout_height="1dp"
+        />
     <android.support.v4.view.ViewPager
 
         android:id="@+id/program_view_pager"

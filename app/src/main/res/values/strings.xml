@@ -14,7 +14,7 @@
     <string name="icon_font_hotel_and_travel">&#xe71f;</string>
     <string name="icon_font_message">&#xe645;</string>
     <string name="icon_font_version_update">&#xe60f;</string>
-
+    <string name="title_activity_patron">Patron</string>
 
 
 </resources>

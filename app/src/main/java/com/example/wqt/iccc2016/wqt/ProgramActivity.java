@@ -34,25 +34,19 @@ public class ProgramActivity extends AppCompatActivity implements ViewPager.OnPa
         mRadioGroup= (SegmentedRadioGroup) findViewById(R.id.segment_text);
         mRadioGroup.setOnCheckedChangeListener(this);
         mRadioButtonLeft= (RadioButton) findViewById(R.id.radio_button_left);
-        //mRadioButtonLeft.setOnClickListener(this);
         mRadioButtonMiddle= (RadioButton) findViewById(R.id.radio_button_middle);
         mRadioButtonRight= (RadioButton) findViewById(R.id.radio_button_right);
 
-        //mRadioButtonLeft.isChecked();
+
         mViewPager= (ViewPager) findViewById(R.id.program_view_pager);
         mViewPager.setCurrentItem(0);
         mViewPager.setOnPageChangeListener(this);
         MyViewPagerAdapter myViewPagerAdapter=new MyViewPagerAdapter(this);
         mViewPager.setAdapter(myViewPagerAdapter);
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //                .setAction("Action", null).show();
-        //    }
-        //});
+
+
+
     }
 
     @Override

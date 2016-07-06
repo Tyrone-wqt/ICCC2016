@@ -9,6 +9,7 @@ import android.widget.GridView;
 
 import com.example.wqt.iccc2016.wqt.HotelAndTravelActivity;
 import com.example.wqt.iccc2016.wqt.MyGridViewAdapter;
+import com.example.wqt.iccc2016.wqt.PatronActivity;
 import com.example.wqt.iccc2016.wqt.ProgramActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 2:
                 break;
             case 3:
+                Intent intentForPatron =new Intent(this, PatronActivity.class);
+                startActivity(intentForPatron);
                 break;
             case 4:
                 break;
