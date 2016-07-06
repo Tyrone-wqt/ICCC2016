@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.example.wqt.iccc2016.qpf.CommitteeActivity;
+import com.example.wqt.iccc2016.qpf.WelcomeActivity;
 import com.example.wqt.iccc2016.wqt.HotelAndTravelActivity;
 import com.example.wqt.iccc2016.wqt.MyGridViewAdapter;
 import com.example.wqt.iccc2016.wqt.ProgramActivity;
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (i) {
             //设置点击事件 intent跳转
             case 0:
+                Intent intentForWelcome=new Intent(this, WelcomeActivity.class);
+                startActivity(intentForWelcome);
                 break;
             case 1:
                 Intent intentForProgram = new Intent(this, ProgramActivity.class);
@@ -45,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 3:
                 break;
             case 4:
+                Intent intentForCommittee=new Intent(this,CommitteeActivity.class);
+                startActivity(intentForCommittee);
                 break;
             case 5:
                 Intent intentForHotelAndTravel = new Intent(this, HotelAndTravelActivity.class);
