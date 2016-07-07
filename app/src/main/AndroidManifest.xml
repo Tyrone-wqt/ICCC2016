@@ -22,10 +22,18 @@
         <activity
             android:name=".wqt.ProgramActivity"
             android:label="@string/title_activity_program"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".wqt.ShowPicActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.WelcomeActivity"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.CommitteeActivity"
+            android:label="@string/title_activity_committee"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
