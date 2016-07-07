@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
@@ -19,6 +20,7 @@ public class WelcomeActivity extends AppCompatActivity
     private TextView mWelcomeContent;
     private TextView mWelcomeEnd;
     private TextView mToolbarTitle;
+    private ImageView mWelcomeImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,8 +38,9 @@ public class WelcomeActivity extends AppCompatActivity
     private void initView()
     {
         Toolbar toolbar = (Toolbar) findViewById(R.id.program_toolbar);
+        mWelcomeImage=(ImageView) findViewById(R.id.welcom_head_image);
         mToolbarTitle= (TextView) findViewById(R.id.welcome_toolbar_title);
-        mWelcomeTitle= (TextView) findViewById(R.id.tv_welcome_title);
+        //mWelcomeTitle= (TextView) findViewById(R.id.tv_welcome_title);
         mWelcomeContent= (TextView) findViewById(R.id.tv_welcome_content);
         mWelcomeEnd= (TextView) findViewById(R.id.tv_welcome_end);
     }

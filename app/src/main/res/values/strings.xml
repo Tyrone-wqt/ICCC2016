@@ -16,14 +16,16 @@
     <string name="icon_font_version_update">&#xe60f;</string>
     <string name="title_activity_welcome">Welcome</string>
     <string name="title_activity_committee">Committee</string>
-    <string name="welcome_title">WELCOME MESSAGE</string>
-    <string name="welcome_content">On behalf of the Executive Committee and the hosting University of Electronic Science and Technology of China,
+    <string name="welcome_title">WELCOME</string>
+    <string name="welcome_content">\tOn behalf of the Executive Committee and the hosting University of Electronic Science and Technology of China,
         it is our great pleasure to welcome you to the fifth IEEE/CIC International Conference on Communications in China (ICCC 2016) in the magnificent
-        city of Chengdu, China, 27-29 July, 2016. Since its commencement in 2012, the ICCC conference has grown steadily from a brand new conference with
+        city of Chengdu, China, 27-29 July, 2016.\n\n
+        Since its commencement in 2012, the ICCC conference has grown steadily from a brand new conference with
         a strong vision, to a unique venue in bringing together global researchers and practitioners in areas of communications to the greater China region.
         In particular, this year’s ICCC aims at addressing a key theme on “Ubiquitous Communications &amp; Computing for Future Internet”,
         which broadly cover all disciplines of communications from fundamental research to emerging applications, while emphasizing society-shaping
-        technologies in the modern IT era. In addition to providing a major forum for people to present their frontier research work and discuss the
+        technologies in the modern IT era.\n\n
+        In addition to providing a major forum for people to present their frontier research work and discuss the
         latest breakthroughs, the ICCC 2016 also features Keynotes, Plenary Speeches, Invited Talks, Tutorials, Industrial &amp; Academic Panels,
         Exhibitions, and dedicated Workshops. For those who attend the ICCC for the first time, you will soon appreciate the fact that ICCC is more
         than just an outstanding technical conference, it is also a friendly rendezvous to interact, inspire, and discover.\n\n

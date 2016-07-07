@@ -32,11 +32,11 @@ public class CommitteeActivity extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         initCommittee();
-        mLisetView.setAdapter(new CommitteeAdapter(CommitteeActivity.this,R.layout.committee_item,mList));
+        mLisetView.setAdapter(new CommitteeAdapter(CommitteeActivity.this,R.layout.item_committee,mList));
     }
 
     private void initCommittee() {
-        Committee general=new Committee("General Chairs","—Shaoqian Li"+"\n"+"University Electronic Science and Technology of China"+"\n"+"\n"
+        Committee general=new Committee("General Chairs","—Shaoqian Li"+"\n"+"University of Electronic Science and Technology of China"+"\n"+"\n"
                 +"—Xinsheng Zhang"+"\n"+"VP & Secretary, CIC");
         mList.add(general);
         Committee technical=new Committee("Technical Program Chairs","—Supeng Leng"+"\n"+"University of Electronic Science and Technology of China"+"\n"+"\n"
