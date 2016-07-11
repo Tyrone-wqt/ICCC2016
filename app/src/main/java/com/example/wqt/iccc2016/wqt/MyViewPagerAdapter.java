@@ -10,12 +10,14 @@ import android.widget.ListView;
 import com.example.wqt.iccc2016.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
- * Created by 127-72 on 2016/7/5.
+ * Created by 127-72 on 2016\7\5.
  */
-public class MyViewPagerAdapter extends PagerAdapter{
+public class MyViewPagerAdapter extends PagerAdapter {
 
 
     Context mContext;
@@ -23,23 +25,238 @@ public class MyViewPagerAdapter extends PagerAdapter{
     ListView mListViewDay1;
     ListView mListViewDay2;
     ListView mListViewDay3;
-    List<String> mTimeLine;
+    List<String> mTimeLine1;
+    List<String> mTimeLine2;
+    List<String> mTimeLine3;
     List<String> mTimeLineContent;
+
+    Map<Integer, List<String>> mTimeLineContentMap1;
+    Map<Integer, List<String>> mTimeLineContentMap2;
+    Map<Integer, List<String>> mTimeLineContentMap3;
     LayoutInflater mLayoutInflater;
-    public MyViewPagerAdapter(Context mContext){
-        this.mContext=mContext;
-        mLayoutInflater= (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mTimeLine=new ArrayList<>();
-        mTimeLine.add("00:00-06:00");
-        mTimeLine.add("06:00-08:00");
-        mTimeLine.add("08:00-10:00");
-        mTimeLine.add("10:00-12:00");
-        mTimeLine.add("12:00-14:00");
-        mTimeLine.add("14:00-18:00");
-        mTimeLine.add("18:00-20:00");
-        mTimeLine.add("20:00-24:00");
 
-        mTimeLineContent=new ArrayList<>();
+    public MyViewPagerAdapter(Context mContext) {
+        this.mContext = mContext;
+        mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //day1 data
+        mTimeLine1 = new ArrayList<>();
+        mTimeLine1.add("08:00-09:00");
+        mTimeLine1.add("09:00-10:30");
+        mTimeLine1.add("10:30-11:00");
+        mTimeLine1.add("11:00-12:30");
+        mTimeLine1.add("12:30-14:00");
+        mTimeLine1.add("14:00-15:30");
+        mTimeLine1.add("15:30-16:00");
+        mTimeLine1.add("16:00-17:30");
+        mTimeLine1.add("18:30-21:00");
+
+        mTimeLineContentMap1 = new HashMap<>();
+        List<String> mContentAtTime0Day1 = new ArrayList<>();
+        mContentAtTime0Day1.add("Conference Registration");
+        mTimeLineContentMap1.put(0, mContentAtTime0Day1);
+
+        List<String> mContentAtTime1Day1 = new ArrayList<>();
+        mContentAtTime1Day1.add("E-MIMO Workshop-1" + "\n" + "(Boya Meeting Room)");
+        mContentAtTime1Day1.add("WIN Workshop-2" + "\n" + "(Hongda Meeting Room)");
+        mContentAtTime1Day1.add("SIN Workshop-3" + "\n" + "(Sentosa Meeting Room)");
+        mContentAtTime1Day1.add("Tutorial#2" + "\n" + "(Maesai Reception Hall 1)");
+        mContentAtTime1Day1.add("Tutorial#5" + "\n" + "(Maesai Reception Hall 2)");
+        mContentAtTime1Day1.add("Tutorial#9" + "\n" + "(Brunei Meeting Room)");
+        mTimeLineContentMap1.put(1, mContentAtTime1Day1);
+
+        List<String> mContentAtTime2Day1 = new ArrayList<>();
+        mContentAtTime2Day1.add("Coffee Break");
+        mTimeLineContentMap1.put(2, mContentAtTime2Day1);
+
+        List<String> mContentAtTime3Day1 = new ArrayList<>();
+        mContentAtTime3Day1.add("E-MIMO Workshop-1" + "\n" + "(Boya Meeting Room)");
+        mContentAtTime3Day1.add("WIN Workshop-2" + "\n" + "(Hongda Meeting Room)");
+        mContentAtTime3Day1.add("SIN Workshop-3" + "\n" + "(Sentosa Meeting Room)");
+        mContentAtTime3Day1.add("Tutorial#2" + "\n" + "(Maesai Reception Hall 1)");
+        mContentAtTime3Day1.add("Tutorial#5" + "\n" + "(Maesai Reception Hall 2)");
+        mContentAtTime3Day1.add("Tutorial#9" + "\n" + "(Brunei Meeting Room)");
+        mTimeLineContentMap1.put(3, mContentAtTime3Day1);
+
+        List<String> mContentAtTime4Day1 = new ArrayList<>();
+        mContentAtTime4Day1.add("Lunch");
+        mTimeLineContentMap1.put(4, mContentAtTime4Day1);
+
+        List<String> mContentAtTime5Day1 = new ArrayList<>();
+        mContentAtTime5Day1.add("Tutorial#3" + "\n" + "(Boya Meeting Room)");
+        mContentAtTime5Day1.add("Tutorial#1" + "\n" + "(Hongda Meeting Room)");
+        mContentAtTime5Day1.add("Tutorial#6" + "\n" + "(Sentosa Meeting Room)");
+        mContentAtTime5Day1.add("Tutorial#4" + "\n" + "(Maesai Reception Hall 1)");
+        mContentAtTime5Day1.add("Tutorial#7" + "\n" + "(Maesai Reception Hall 2)");
+        mContentAtTime5Day1.add("Tutorial#8" + "\n" + "(Brunei Meeting Room)");
+        mTimeLineContentMap1.put(5, mContentAtTime5Day1);
+
+        List<String> mContentAtTime6Day1 = new ArrayList<>();
+        mContentAtTime6Day1.add("Coffee Break");
+        mTimeLineContentMap1.put(6, mContentAtTime6Day1);
+
+        List<String> mContentAtTime7Day1 = new ArrayList<>();
+        mContentAtTime7Day1.add("Tutorial#3" + "\n" + "(Boya Meeting Room)");
+        mContentAtTime7Day1.add("Tutorial#1" + "\n" + "(Hongda Meeting Room)");
+        mContentAtTime7Day1.add("Tutorial#6" + "\n" + "(Sentosa Meeting Room)");
+        mContentAtTime7Day1.add("Tutorial#4" + "\n" + "(Maesai Reception Hall 1)");
+        mContentAtTime7Day1.add("Tutorial#7" + "\n" + "(Maesai Reception Hall 2)");
+        mContentAtTime7Day1.add("Tutorial#8" + "\n" + "(Brunei Meeting Room)");
+        mTimeLineContentMap1.put(7, mContentAtTime7Day1);
+
+
+        List<String> mContentAtTime8Day1 = new ArrayList<>();
+        mContentAtTime8Day1.add("Reception");
+        mTimeLineContentMap1.put(8, mContentAtTime8Day1);
+        //********************************************
+
+        //day2 data
+        mTimeLine2 = new ArrayList<>();
+        mTimeLine2.add("08:00-08:30");
+        mTimeLine2.add("08:30-09:00");
+        mTimeLine2.add("09:00-10:30");
+        mTimeLine2.add("10:30-11:00");
+        mTimeLine2.add("11:00-12:30");
+        mTimeLine2.add("12:30-14:00");
+        mTimeLine2.add("14:00-15:30");
+        mTimeLine2.add("15:30-16:00");
+        mTimeLine2.add("16:00-17:30");
+        mTimeLine2.add("18:30-21:00");
+
+
+        mTimeLineContentMap2=new HashMap<Integer, List<String>>();
+        List<String> mContentAtTime0Day2 = new ArrayList<>();
+        mContentAtTime0Day2.add("Conference Registration");
+        mTimeLineContentMap2.put(0,mContentAtTime0Day2);
+
+
+        List<String> mContentAtTime1Day2 = new ArrayList<>();
+        mContentAtTime1Day2.add("Welcome Opening"+"\n"+"(Wufu Hall)");
+        mTimeLineContentMap2.put(1,mContentAtTime1Day2);
+
+        List<String> mContentAtTime2Day2 = new ArrayList<>();
+        mContentAtTime2Day2.add("keynote Speech #1"+"\n"+"(Wufu Hail)");
+        mContentAtTime2Day2.add("keynote Speech #2"+"\n"+"(Wufu Hail)");
+        mTimeLineContentMap2.put(2,mContentAtTime2Day2);
+
+
+        List<String> mContentAtTime3Day2 = new ArrayList<>();
+        mContentAtTime3Day2.add("Coffee Break & Poster Session-1");
+        mTimeLineContentMap2.put(3,mContentAtTime3Day2);
+
+
+        List<String> mContentAtTime4Day2 = new ArrayList<>();
+        mContentAtTime4Day2.add("WCS-1"+"\n"+"(Boya Meeting Room)");
+        mContentAtTime4Day2.add("CCT-1"+"\n"+"(Hongda Meeting Room)");
+        mContentAtTime4Day2.add("SPC-1"+"\n"+"(Maesai Reception Hall 2)");
+        mContentAtTime4Day2.add("IAP"+"\n"+"(Brunei Meeting Room)");
+        mContentAtTime4Day2.add("Invited-1"+"\n"+"(Sentosa Meeting Room)");
+        mContentAtTime4Day2.add("Invited-2"+"\n"+"(International Conference Hall)");
+        mTimeLineContentMap2.put(4,mContentAtTime4Day2);
+
+
+        List<String> mContentAtTime5Day2 = new ArrayList<>();
+        mContentAtTime5Day2.add("Lunch");
+        mTimeLineContentMap2.put(5,mContentAtTime5Day2);
+
+
+        List<String> mContentAtTime6Day2 = new ArrayList<>();
+        mContentAtTime6Day2.add("WCS-2"+"\n"+"(Boya Meeting Room)");
+        mContentAtTime6Day2.add("CCT-2"+"\n"+"(Hongda Meeting Room)");
+        mContentAtTime6Day2.add("SPC-2"+"\n"+"(Maesai Reception Hall 2)");
+        mContentAtTime6Day2.add("NGN-1"+"\n"+"(Brunei Meeting Room)");
+        mContentAtTime6Day2.add("Invited-3"+"\n"+"(Sentosa Meeting Room)");
+        mContentAtTime6Day2.add("Invited-4"+"\n"+"(International Conference Hall)");
+        mContentAtTime6Day2.add("Steering Committee Meeting"+"\n"+"(Maesai Reception Hall 1)");
+        mTimeLineContentMap2.put(6,mContentAtTime6Day2);
+
+
+        List<String> mContentAtTime7Day2 = new ArrayList<>();
+        mContentAtTime7Day2.add("Coffee Break");
+        mTimeLineContentMap2.put(7,mContentAtTime7Day2);
+
+
+        List<String> mContentAtTime8Day2 = new ArrayList<>();
+        mContentAtTime8Day2.add("WCS-3"+"\n"+"(Boya Meeting Room)");
+        mContentAtTime8Day2.add("WCS-4"+"\n"+"(Hongda Meeting Room)");
+        mContentAtTime8Day2.add("SPC-3"+"\n"+"(Maesai Reception Hall 2)");
+        mContentAtTime8Day2.add("NGN-2"+"\n"+"(Brunei Meeting Room)");
+        mContentAtTime8Day2.add("NGN-3"+"\n"+"(Sentosa Meeting Room)");
+        //mContentAtTime8Day2.add("Invited-4"+"\n"+"(International Conference Hall)");
+        mContentAtTime8Day2.add("Steering Committee Meeting"+"\n"+"(Maesai Reception Hall 1)");
+        mTimeLineContentMap2.put(8,mContentAtTime8Day2);
+
+
+        List<String> mContentAtTime9Day2 = new ArrayList<>();
+        mContentAtTime9Day2.add("Banquet");
+        mTimeLineContentMap2.put(9,mContentAtTime9Day2);
+        //***********************************8**************
+
+        //day3 data
+        mTimeLine3 = new ArrayList<>();
+        mTimeLine3.add("08:00-09:00");
+        mTimeLine3.add("09:00-10:30");
+        mTimeLine3.add("10:30-11:00");
+        mTimeLine3.add("11:00-12:30");
+        mTimeLine3.add("12:30-14:00");
+        mTimeLine3.add("14:00-15:30");
+        mTimeLine3.add("15:30-16:00");
+        mTimeLine3.add("16:00-17:30");
+
+        mTimeLineContentMap3=new HashMap<Integer, List<String>>();
+
+        List<String> mContentAtTime0Day3 = new ArrayList<>();
+        mContentAtTime0Day3.add("Conference Registration");
+        mTimeLineContentMap3.put(0,mContentAtTime0Day3);
+
+        List<String> mContentAtTime1Day3 = new ArrayList<>();
+        mContentAtTime1Day3.add("Keynote Speech #3"+"\n"+"(Wufu Hall)");
+        mContentAtTime1Day3.add("Keynote Speech #4"+"\n"+"(Wufu Hall)");
+        mTimeLineContentMap3.put(1,mContentAtTime1Day3);
+
+        List<String> mContentAtTime2Day3 = new ArrayList<>();
+        mContentAtTime2Day3.add("Coffee Break & Poster Session-2");
+        mTimeLineContentMap3.put(2,mContentAtTime2Day3);
+
+        List<String> mContentAtTime3Day3 = new ArrayList<>();
+        mContentAtTime3Day3.add("WNM-1"+"\n"+"(Boya Meeting Room)");
+        mContentAtTime3Day3.add("SPC-4"+"\n"+"(Brunei Meeting Room)");
+        mContentAtTime3Day3.add("Invited-5"+"\n"+"(Sentosa Meeting Room)");
+        mContentAtTime3Day3.add("SNBD-1"+"\n"+"(Maesai Reception Hall 1)");
+        mContentAtTime3Day3.add("PSC-1"+"\n"+"(Maesai Reception Hall 2)");
+        mTimeLineContentMap3.put(3,mContentAtTime3Day3);
+
+
+        List<String> mContentAtTime4Day3 = new ArrayList<>();
+        mContentAtTime4Day3.add("Lunch");
+        mTimeLineContentMap3.put(4,mContentAtTime4Day3);
+
+        List<String> mContentAtTime5Day3 = new ArrayList<>();
+        mContentAtTime5Day3.add("WNM-5"+"\n"+"(Boya Meeting Room)");
+        mContentAtTime5Day3.add("SPC-5"+"\n"+"(Brunei Meeting Room)");
+        mContentAtTime5Day3.add("STC-1"+"\n"+"(Hongda Meeting Room)");
+        mContentAtTime5Day3.add("OCSN-1"+"\n"+"(Maesai Reception Hall 1)");
+        mContentAtTime5Day3.add("PSC-2"+"\n"+"(Maesai Reception Hall 2)");
+        mTimeLineContentMap3.put(5,mContentAtTime5Day3);
+
+
+        List<String> mContentAtTime6Day3 = new ArrayList<>();
+        mContentAtTime6Day3.add("Coffee Break");
+        mTimeLineContentMap3.put(6,mContentAtTime6Day3);
+
+        List<String> mContentAtTime7Day3 = new ArrayList<>();
+        mContentAtTime5Day3.add("WCS-6"+"\n"+"(Boya Meeting Room)");
+        mContentAtTime5Day3.add("WCS-7"+"\n"+"(Brunei Meeting Room)");
+        mContentAtTime5Day3.add("STC-2"+"\n"+"(Hongda Meeting Room)");
+        mContentAtTime5Day3.add("OCSN-2"+"\n"+"(Maesai Reception Hall 1)");
+        mTimeLineContentMap3.put(7,mContentAtTime7Day3);
+
+
+
+
+
+
+
+        mTimeLineContent = new ArrayList<>();
         mTimeLineContent.add("test");
         mTimeLineContent.add("test");
         mTimeLineContent.add("test");
@@ -50,18 +267,19 @@ public class MyViewPagerAdapter extends PagerAdapter{
         mTimeLineContent.add("test");
 
 
-        mList=new ArrayList<>();
-        mListViewDay1= (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager,null);
-        mListViewDay1.setAdapter(new ItemListViewAdapter(mContext,mTimeLine,mTimeLineContent));
-        mListViewDay2= (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager,null);
-        mListViewDay2.setAdapter(new ItemListViewAdapter(mContext,mTimeLine,mTimeLineContent));
-        mListViewDay3= (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager,null);
-        mListViewDay3.setAdapter(new ItemListViewAdapter(mContext,mTimeLine,mTimeLineContent));
+        mList = new ArrayList<>();
+        mListViewDay1 = (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
+        mListViewDay1.setAdapter(new ItemListViewAdapter(mContext, mTimeLine1, mTimeLineContentMap1));
+        mListViewDay2 = (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
+        mListViewDay2.setAdapter(new ItemListViewAdapter(mContext, mTimeLine2, mTimeLineContentMap2));
+        mListViewDay3 = (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
+        mListViewDay3.setAdapter(new ItemListViewAdapter(mContext, mTimeLine3, mTimeLineContentMap3));
 
         mList.add(mListViewDay1);
         mList.add(mListViewDay2);
         mList.add(mListViewDay3);
     }
+
     @Override
     public int getCount() {
         return mList.size();
@@ -69,7 +287,7 @@ public class MyViewPagerAdapter extends PagerAdapter{
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view==object;
+        return view == object;
     }
 
     @Override
@@ -81,9 +299,9 @@ public class MyViewPagerAdapter extends PagerAdapter{
     public Object instantiateItem(ViewGroup container, int position) {
         //return super.instantiateItem(container, position);
 
-            container.addView(mList.get(position));
+        container.addView(mList.get(position));
 
-        return  mList.get(position);
+        return mList.get(position);
     }
 
 

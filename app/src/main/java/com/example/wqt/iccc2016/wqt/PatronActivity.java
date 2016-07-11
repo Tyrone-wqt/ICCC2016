@@ -1,6 +1,5 @@
 package com.example.wqt.iccc2016.wqt;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,33 +12,33 @@ import com.example.wqt.iccc2016.R;
 public class PatronActivity extends AppCompatActivity {
 
     TextView mToolbarTitle;
-    TextView mPatron1;
-    TextView mPatron2;
-    TextView mPatron3;
-    TextView mPatron4;
-    TextView mPatron5;
+    //TextView mPatron1;
+    //TextView mPatron2;
+    //TextView mPatron3;
+    //TextView mPatron4;
+    //TextView mPatron5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patron);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbarTitle = (TextView) findViewById(R.id.program_toolbar_title);
+        mToolbarTitle = (TextView) findViewById(R.id.patron_toolbar_title);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        mPatron1 = (TextView) findViewById(R.id.patron_icon1);
-        mPatron2 = (TextView) findViewById(R.id.patron_icon2);
-        mPatron3 = (TextView) findViewById(R.id.patron_icon3);
-        mPatron4 = (TextView) findViewById(R.id.patron_icon4);
-        mPatron5 = (TextView) findViewById(R.id.patron_icon5);
+        //mPatron1 = (TextView) findViewById(R.id.patron_icon1);
+        //mPatron2 = (TextView) findViewById(R.id.patron_icon2);
+        //mPatron3 = (TextView) findViewById(R.id.patron_icon3);
+        //mPatron4 = (TextView) findViewById(R.id.patron_icon4);
+        //mPatron5 = (TextView) findViewById(R.id.patron_icon5);
 
-        Typeface mTypeface = Typeface.createFromAsset(getAssets(), "iconfont/iconfont.ttf");
-        mPatron2.setTypeface(mTypeface);
-        mPatron1.setTypeface(mTypeface);
-        mPatron3.setTypeface(mTypeface);
-        mPatron4.setTypeface(mTypeface);
-        mPatron5.setTypeface(mTypeface);
+        //Typeface mTypeface = Typeface.createFromAsset(getAssets(), "iconfont/iconfont.ttf");
+        //mPatron2.setTypeface(mTypeface);
+        //mPatron1.setTypeface(mTypeface);
+        //mPatron3.setTypeface(mTypeface);
+        //mPatron4.setTypeface(mTypeface);
+        //mPatron5.setTypeface(mTypeface);
 
     }
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="8dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.wqt.iccc2016.wqt.ProgramActivity"
     tools:showIn="@layout/activity_program">
@@ -59,6 +59,7 @@
     </com.example.wqt.iccc2016.wqt.Radio.SegmentedRadioGroup>
 
     <View
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:background="@color/colorDividerBg"
         android:layout_height="1dp"
