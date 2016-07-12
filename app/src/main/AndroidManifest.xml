@@ -33,6 +33,10 @@
         <activity
             android:name=".qpf.CommitteeActivity"
             android:label="@string/title_activity_committee"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.VersionActivity"
+            android:label="@string/title_activity_version"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 

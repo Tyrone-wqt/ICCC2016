@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.example.wqt.iccc2016.qpf.CommitteeActivity;
+import com.example.wqt.iccc2016.qpf.VersionActivity;
 import com.example.wqt.iccc2016.qpf.WelcomeActivity;
 import com.example.wqt.iccc2016.wqt.HotelAndTravelActivity;
 import com.example.wqt.iccc2016.wqt.MyGridViewAdapter;
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 6:
                 break;
             case 7:
+                Intent intentForUpdate=new Intent(this, VersionActivity.class);
+                startActivity(intentForUpdate);
                 break;
         }
     }

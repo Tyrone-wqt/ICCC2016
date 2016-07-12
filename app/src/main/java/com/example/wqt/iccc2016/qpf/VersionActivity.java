@@ -13,35 +13,27 @@ import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
 
-public class WelcomeActivity extends AppCompatActivity
-{
+public class VersionActivity extends AppCompatActivity {
 
-
-    private TextView mWelcomeContent;
-    private TextView mWelcomeEnd;
     private TextView mToolbarTitle;
-    private ImageView mWelcomeImage;
+    private ImageView mUpdateImage;
+    private TextView mUpdateText;
+    private Toolbar toolbar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_version);
         initView();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.welcome_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
     }
 
-    private void initView()
-    {
-        mWelcomeImage=(ImageView) findViewById(R.id.welcom_head_image);
-        mToolbarTitle= (TextView) findViewById(R.id.welcome_toolbar_title);
-        //mWelcomeTitle= (TextView) findViewById(R.id.tv_welcome_title);
-        mWelcomeContent= (TextView) findViewById(R.id.tv_welcome_content);
-        mWelcomeEnd= (TextView) findViewById(R.id.tv_welcome_end);
+    private void initView() {
+        toolbar = (Toolbar) findViewById(R.id.update_toolbar);
+        mUpdateImage=(ImageView) findViewById(R.id.img_update);
+        mUpdateText=(TextView) findViewById(R.id.tv_update);
     }
 
     @Override
@@ -62,22 +54,18 @@ public class WelcomeActivity extends AppCompatActivity
     }
 
     @Override
-    public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState)
-    {
+    public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         //super.onPostCreate(savedInstanceState, persistentState);
-        if(!isChild()){
-            onTitleChanged(getTitle(),getTitleColor());
+        if (!isChild()) {
+            onTitleChanged(getTitle(), getTitleColor());
         }
     }
 
     @Override
-    protected void onTitleChanged(CharSequence title, int color)
-    {
+    protected void onTitleChanged(CharSequence title, int color) {
         super.onTitleChanged(title, color);
-        if(mToolbarTitle!=null){
+        if (mToolbarTitle != null) {
             mToolbarTitle.setText(title);
         }
     }
-
-
 }

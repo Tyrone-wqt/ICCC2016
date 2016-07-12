@@ -17,6 +17,7 @@
     <string name="title_activity_welcome">Welcome</string>
     <string name="title_activity_committee">Committee</string>
     <string name="welcome_title">WELCOME</string>
+    <string name="title_activity_version">Version</string>
     <string name="welcome_content">\tOn behalf of the Executive Committee and the hosting University of Electronic Science and Technology of China,
         it is our great pleasure to welcome you to the fifth IEEE/CIC International Conference on Communications in China (ICCC 2016) in the magnificent
         city of Chengdu, China, 27-29 July, 2016.\n\n
@@ -34,7 +35,7 @@
         We look forward to their stimulating and scholastic seminars.\n\n
         Finally, we wish all the participants a very fruitful and productive conference, and also an unforgettable stay in Chengdu.</string>
     <string name="welcome_end">Program Committee, IEEE/CIC ICCC 2016</string>
-    <string name="btn_back">Back</string>
-    <string name="btn_about">About</string>
+    <string name="update_info">Already up-to-date</string>
+
 
 </resources>
