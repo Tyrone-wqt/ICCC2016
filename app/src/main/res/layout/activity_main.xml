@@ -70,7 +70,9 @@
         android:horizontalSpacing="5dp"
         android:numColumns="2"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="8dp"></GridView>
+        android:verticalSpacing="8dp">
+
+    </GridView>
 
 
 </RelativeLayout>
