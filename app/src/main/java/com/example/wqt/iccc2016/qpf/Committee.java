@@ -5,31 +5,38 @@ package com.example.wqt.iccc2016.qpf;
  */
 public class Committee
 {
-    private String introduction;
-    private String member;
-    public Committee(String introduction, String member)
+    private int committeeIcon;
+    private String committeeName;
+    private String committeeLocation;
+
+    public Committee(int committeeIcon, String committeeName, String committeeLocation)
     {
-        this.introduction = introduction;
-        this.member = member;
+        this.committeeIcon = committeeIcon;
+        this.committeeName = committeeName;
+        this.committeeLocation = committeeLocation;
     }
 
-    public String getIntroduction()
-    {
-        return introduction;
+    public int getCommitteeIcon() {
+        return committeeIcon;
     }
 
-    public void setIntroduction(String introduction)
-    {
-        this.introduction = introduction;
+    public void setCommitteeIcon(int committeeIcon) {
+        this.committeeIcon = committeeIcon;
     }
 
-    public String getMember()
-    {
-        return member;
+    public String getCommitteeName() {
+        return committeeName;
     }
 
-    public void setMember(String member)
-    {
-        this.member = member;
+    public void setCommitteeName(String committeeName) {
+        this.committeeName = committeeName;
+    }
+
+    public String getCommitteeLocation() {
+        return committeeLocation;
+    }
+
+    public void setCommitteeLocation(String committeeLocation) {
+        this.committeeLocation = committeeLocation;
     }
 }

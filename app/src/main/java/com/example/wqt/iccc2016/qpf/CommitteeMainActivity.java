@@ -17,47 +17,50 @@ import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
 
-import java.util.List;
+public class CommitteeMainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-public class WelcomeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
-
-    private ImageView mWelcomeImage;
-    private TextView mToolbarTitle;
-    private ListView mListView;
     private String[] mList;
+    private ListView mListView;
+    private TextView mToolbarTitle;
+    private ImageView mWelcomeImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_committee_main);
         initView();
-        mList=getResources().getStringArray(R.array.welcome_list);
+        mList=getResources().getStringArray(R.array.committee_main_list);
         mListView.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mList));
         mListView.setOnItemClickListener(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.welcome_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.committee_main_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
     }
 
     private void initView() {
-        mWelcomeImage=(ImageView) findViewById(R.id.welcome_head_image);
-        mToolbarTitle= (TextView) findViewById(R.id.welcome_toolbar_title);
-        mListView=(ListView) findViewById(R.id.lv_welcome);
+        mWelcomeImage=(ImageView) findViewById(R.id.committee_main_head_image);
+        mToolbarTitle= (TextView) findViewById(R.id.committee_main_toolbar_title);
+        mListView=(ListView) findViewById(R.id.lv_committee_main);
+
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
         switch (i)
         {
             case 0:
-                Intent intentGeneral=new Intent(WelcomeActivity.this,GeneralChairsActivity.class);
-                startActivity(intentGeneral);
+                Intent intentCommittee=new Intent(this,CommitteeActivity.class);
+                startActivity(intentCommittee);
                 break;
             case 1:
-                Intent intentTechnical=new Intent(WelcomeActivity.this,TechnicalProgramChairsActivity.class);
+                Intent intentTechnical=new Intent(this,TechnicalProgramCommitteeActivity.class);
                 startActivity(intentTechnical);
+                break;
+            case 2:
+                Intent intentMember=new Intent(this,MemberActivity.class);
+                startActivity(intentMember);
                 break;
         }
     }

@@ -8,41 +8,53 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
 
-public class VersionActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
+public class TechnicalProgramCommitteeActivity extends AppCompatActivity {
+
+    private ListView mListView;
+    private List<Committee> mList=new ArrayList<Committee>();
     private TextView mToolbarTitle;
-    private ImageView mUpdateImage;
-    private TextView mUpdateText;
-    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_version);
+        setContentView(R.layout.activity_technical_program_committee);
         initView();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.technical_program_committee_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        initTPCCommittee();
+        mListView.setAdapter(new CommitteeAdapter(TechnicalProgramCommitteeActivity.this, R.layout.item_committee, mList));
+    }
+
+    private void initTPCCommittee() {
+        Committee supeng_leng=new Committee(R.drawable.anonymous_icon,"Supeng Leng","China");
+        mList.add(supeng_leng);
+        Committee yan_zhang=new Committee(R.drawable.anonymous_icon,"Yan Zhang","Norway");
+        mList.add(yan_zhang);
+        Committee nei_kato=new Committee(R.drawable.anonymous_icon,"Nei Kato","Japan");
+        mList.add(nei_kato);
+        Committee guang_shi=new Committee(R.drawable.anonymous_icon,"Guang Shi","China");
+        mList.add(guang_shi);
     }
 
     private void initView() {
-        toolbar = (Toolbar) findViewById(R.id.update_toolbar);
-        mToolbarTitle=(TextView) findViewById(R.id.update_toolbar_title);
-        mUpdateImage=(ImageView) findViewById(R.id.img_update);
-        mUpdateText=(TextView) findViewById(R.id.tv_update);
+        mListView = (ListView) findViewById(R.id.lv_technical_program_committee);
+        mToolbarTitle = (TextView) findViewById(R.id.technical_program_committee_toolbar_title);
+
     }
-
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
                 break;

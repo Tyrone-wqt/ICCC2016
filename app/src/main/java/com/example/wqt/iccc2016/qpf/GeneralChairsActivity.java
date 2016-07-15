@@ -2,39 +2,42 @@ package com.example.wqt.iccc2016.qpf;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
 
-public class VersionActivity extends AppCompatActivity {
+public class GeneralChairsActivity extends AppCompatActivity
+{
 
+
+    private TextView mWelcomeContent;
+    private TextView mWelcomeEnd;
     private TextView mToolbarTitle;
-    private ImageView mUpdateImage;
-    private TextView mUpdateText;
-    private Toolbar toolbar;
+    private ImageView mWelcomeImage;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_version);
+        setContentView(R.layout.activity_general_chairs);
         initView();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.general_chairs_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
     }
 
-    private void initView() {
-        toolbar = (Toolbar) findViewById(R.id.update_toolbar);
-        mToolbarTitle=(TextView) findViewById(R.id.update_toolbar_title);
-        mUpdateImage=(ImageView) findViewById(R.id.img_update);
-        mUpdateText=(TextView) findViewById(R.id.tv_update);
+    private void initView()
+    {
+        mWelcomeImage=(ImageView) findViewById(R.id.general_chairs_head_image);
+        mToolbarTitle= (TextView) findViewById(R.id.general_chairs_toolbar_title);
+        mWelcomeContent= (TextView) findViewById(R.id.tv_general_chairs_content);
+        mWelcomeEnd= (TextView) findViewById(R.id.tv_general_chairs_end);
     }
 
     @Override
@@ -55,18 +58,22 @@ public class VersionActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
+    public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState)
+    {
         //super.onPostCreate(savedInstanceState, persistentState);
-        if (!isChild()) {
-            onTitleChanged(getTitle(), getTitleColor());
+        if(!isChild()){
+            onTitleChanged(getTitle(),getTitleColor());
         }
     }
 
     @Override
-    protected void onTitleChanged(CharSequence title, int color) {
+    protected void onTitleChanged(CharSequence title, int color)
+    {
         super.onTitleChanged(title, color);
-        if (mToolbarTitle != null) {
+        if(mToolbarTitle!=null){
             mToolbarTitle.setText(title);
         }
     }
+
+
 }

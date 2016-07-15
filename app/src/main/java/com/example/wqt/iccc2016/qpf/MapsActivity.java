@@ -1,6 +1,5 @@
 package com.example.wqt.iccc2016.qpf;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,34 +16,32 @@ import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
 
-import java.util.List;
+public class MapsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-public class WelcomeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
-
+    private String[] mList;
+    private ListView mListView;
     private ImageView mWelcomeImage;
     private TextView mToolbarTitle;
-    private ListView mListView;
-    private String[] mList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_maps);
         initView();
-        mList=getResources().getStringArray(R.array.welcome_list);
+        mList=getResources().getStringArray(R.array.map_list);
         mListView.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mList));
         mListView.setOnItemClickListener(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.welcome_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.maps_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
     }
 
     private void initView() {
-        mWelcomeImage=(ImageView) findViewById(R.id.welcome_head_image);
-        mToolbarTitle= (TextView) findViewById(R.id.welcome_toolbar_title);
-        mListView=(ListView) findViewById(R.id.lv_welcome);
+        mWelcomeImage=(ImageView) findViewById(R.id.maps_head_image);
+        mToolbarTitle= (TextView) findViewById(R.id.maps_toolbar_title);
+        mListView=(ListView) findViewById(R.id.lv_maps);
+
     }
 
     @Override
@@ -52,15 +49,14 @@ public class WelcomeActivity extends AppCompatActivity implements AdapterView.On
         switch (i)
         {
             case 0:
-                Intent intentGeneral=new Intent(WelcomeActivity.this,GeneralChairsActivity.class);
-                startActivity(intentGeneral);
                 break;
             case 1:
-                Intent intentTechnical=new Intent(WelcomeActivity.this,TechnicalProgramChairsActivity.class);
-                startActivity(intentTechnical);
+                break;
+            case 2:;
                 break;
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {

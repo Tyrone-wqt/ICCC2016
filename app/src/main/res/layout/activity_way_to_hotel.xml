@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".qpf.CommitteeActivity">
+    tools:context="com.example.wqt.iccc2016.qpf.WayToHotelActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/committee_toolbar"
+            android:id="@+id/way_to_hotel_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -22,14 +22,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="center"
-                android:id="@+id/committee_toolbar_title"
+                android:id="@+id/way_to_hotel_toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_committee" />
+    <include layout="@layout/content_way_to_hotel" />
 
 
 </android.support.design.widget.CoordinatorLayout>
