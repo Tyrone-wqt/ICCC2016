@@ -44,48 +44,11 @@ public class ProgramActivity extends AppCompatActivity implements ViewPager.OnPa
         MyViewPagerAdapter myViewPagerAdapter=new MyViewPagerAdapter(this);
         mViewPager.setAdapter(myViewPagerAdapter);
 
-
-
-
     }
 
-    @Override
-    public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        //super.onPostCreate(savedInstanceState, persistentState);
-        if(!isChild()){
-            onTitleChanged(getTitle(),getTitleColor());
-        }
-    }
 
-    @Override
-    protected void onTitleChanged(CharSequence title, int color) {
-        super.onTitleChanged(title, color);
-        if(mToolbarTitle!=null){
-            mToolbarTitle.setText(title);
-        }
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.show_pic, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                this.finish();
-                break;
-            default:
-                return true;
-            
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -149,6 +112,51 @@ public class ProgramActivity extends AppCompatActivity implements ViewPager.OnPa
                 mViewPager.setCurrentItem(2,true);
                 //group.check(R.id.radio_button_right);
                 break;
+        }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //getMenuInflater().inflate(R.menu.show_pic, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                break;
+            default:
+                return true;
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
+    }
+
+    @Override
+    public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
+        //super.onPostCreate(savedInstanceState, persistentState);
+        if(!isChild()){
+            onTitleChanged(getTitle(),getTitleColor());
+        }
+    }
+
+    @Override
+    protected void onTitleChanged(CharSequence title, int color) {
+        super.onTitleChanged(title, color);
+        if(mToolbarTitle!=null){
+            mToolbarTitle.setText(title);
         }
     }
 }

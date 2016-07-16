@@ -6,7 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 
+import com.example.wqt.iccc2016.qpf.CommitteeActivity;
+import com.example.wqt.iccc2016.qpf.VersionActivity;
+import com.example.wqt.iccc2016.qpf.WelcomeActivity;
+import com.example.wqt.iccc2016.wqt.DBHelper.DBManager;
 import com.example.wqt.iccc2016.wqt.HotelAndTravelActivity;
 import com.example.wqt.iccc2016.wqt.MyGridViewAdapter;
 import com.example.wqt.iccc2016.wqt.PatronActivity;
@@ -20,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     String[] mGridViewTextStrings = new String[]{"Welcome", "Program", "Map", "Patrons", "Commitee", "Hotel/Travel", "Messages", "Version Update"};
 
+    ProgressBar mProgressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +34,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         MyGridViewAdapter mAdapter = new MyGridViewAdapter(this, mGridViewImageIds, mGridViewTextStrings);
         mGridView.setAdapter(mAdapter);
         mGridView.setOnItemClickListener(this);
+        mProgressBar= (ProgressBar) findViewById(R.id.main_progress);
+        DBManager mDBManager=new DBManager();
+        mDBManager.openDatabase(getApplicationContext());
+        mDBManager.closeDatabase();
+        mProgressBar.setVisibility(View.INVISIBLE);
+        mGridView.setVisibility(View.VISIBLE);
     }
 
 
@@ -36,7 +48,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (i) {
             //设置点击事件 intent跳转
             case 0:
+                Intent intentForWelcome=new Intent(this, WelcomeActivity.class);
+                startActivity(intentForWelcome);
                 break;
+
             case 1:
                 Intent intentForProgram = new Intent(this, ProgramActivity.class);
                 startActivity(intentForProgram);
@@ -48,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(intentForPatron);
                 break;
             case 4:
+                Intent intentForCommittee=new Intent(this,CommitteeActivity.class);
+                startActivity(intentForCommittee);
                 break;
             case 5:
                 Intent intentForHotelAndTravel = new Intent(this, HotelAndTravelActivity.class);
@@ -56,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 6:
                 break;
             case 7:
+                Intent intentForUpdate=new Intent(this, VersionActivity.class);
+                startActivity(intentForUpdate);
                 break;
         }
     }

@@ -1,49 +1,43 @@
-package com.example.wqt.iccc2016.wqt;
+package com.example.wqt.iccc2016.qpf;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
 
-public class PatronActivity extends AppCompatActivity {
-
+public class WelcomeActivity extends AppCompatActivity
+{
+    private TextView mWelcomeContent;
+    private TextView mWelcomeEnd;
     TextView mToolbarTitle;
-    TextView mTextHuaweiWeb;
-    String mHuaweiWebLink="<strong>Website</strong>: <a href=\"http://www.huawei.com/en\">www.huawei.com</a>";
+    private ImageView mWelcomeImage;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patron);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbarTitle = (TextView) findViewById(R.id.patron_toolbar_title);
+        setContentView(R.layout.activity_welcome);
+        initView();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.welcome_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        mTextHuaweiWeb= (TextView) findViewById(R.id.huawei_web);
-        mTextHuaweiWeb.setText(Html.fromHtml(mHuaweiWebLink,null,null));
-        //RecyclerView view=new RecyclerView(this);
 
-        //mPatron1 = (TextView) findViewById(R.id.patron_icon1);
-        //mPatron2 = (TextView) findViewById(R.id.patron_icon2);
-        //mPatron3 = (TextView) findViewById(R.id.patron_icon3);
-        //mPatron4 = (TextView) findViewById(R.id.patron_icon4);
-        //mPatron5 = (TextView) findViewById(R.id.patron_icon5);
+    }
 
-        //Typeface mTypeface = Typeface.createFromAsset(getAssets(), "iconfont/iconfont.ttf");
-        //mPatron2.setTypeface(mTypeface);
-        //mPatron1.setTypeface(mTypeface);
-        //mPatron3.setTypeface(mTypeface);
-        //mPatron4.setTypeface(mTypeface);
-        //mPatron5.setTypeface(mTypeface);
-
+    private void initView()
+    {
+        mWelcomeImage=(ImageView) findViewById(R.id.welcom_head_image);
+        mToolbarTitle= (TextView) findViewById(R.id.welcome_toolbar_title);
+        //mWelcomeTitle= (TextView) findViewById(R.id.tv_welcome_title);
+        mWelcomeContent= (TextView) findViewById(R.id.tv_welcome_content);
+        mWelcomeEnd= (TextView) findViewById(R.id.tv_welcome_end);
     }
 
     @Override
@@ -89,6 +83,5 @@ public class PatronActivity extends AppCompatActivity {
             mToolbarTitle.setText(title);
         }
     }
-
 
 }

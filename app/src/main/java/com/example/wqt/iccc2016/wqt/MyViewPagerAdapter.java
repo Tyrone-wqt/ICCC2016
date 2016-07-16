@@ -2,10 +2,10 @@ package com.example.wqt.iccc2016.wqt;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.example.wqt.iccc2016.R;
 
@@ -22,17 +22,17 @@ public class MyViewPagerAdapter extends PagerAdapter {
 
     Context mContext;
     List<View> mList;
-    ListView mListViewDay1;
-    ListView mListViewDay2;
-    ListView mListViewDay3;
+    RecyclerView mListViewDay1;
+    RecyclerView mListViewDay2;
+    RecyclerView mListViewDay3;
     List<String> mTimeLine1;
     List<String> mTimeLine2;
     List<String> mTimeLine3;
     List<String> mTimeLineContent;
 
-    Map<Integer, List<String>> mTimeLineContentMap1;
-    Map<Integer, List<String>> mTimeLineContentMap2;
-    Map<Integer, List<String>> mTimeLineContentMap3;
+    Map<String, List<String>> mTimeLineContentMap1;
+    Map<String, List<String>> mTimeLineContentMap2;
+    Map<String, List<String>> mTimeLineContentMap3;
     LayoutInflater mLayoutInflater;
 
     public MyViewPagerAdapter(Context mContext) {
@@ -53,7 +53,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mTimeLineContentMap1 = new HashMap<>();
         List<String> mContentAtTime0Day1 = new ArrayList<>();
         mContentAtTime0Day1.add("Conference Registration");
-        mTimeLineContentMap1.put(0, mContentAtTime0Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(0), mContentAtTime0Day1);
 
         List<String> mContentAtTime1Day1 = new ArrayList<>();
         mContentAtTime1Day1.add("E-MIMO Workshop-1" + "\n" + "(Boya Meeting Room)");
@@ -62,11 +62,11 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime1Day1.add("Tutorial#2" + "\n" + "(Maesai Reception Hall 1)");
         mContentAtTime1Day1.add("Tutorial#5" + "\n" + "(Maesai Reception Hall 2)");
         mContentAtTime1Day1.add("Tutorial#9" + "\n" + "(Brunei Meeting Room)");
-        mTimeLineContentMap1.put(1, mContentAtTime1Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(1), mContentAtTime1Day1);
 
         List<String> mContentAtTime2Day1 = new ArrayList<>();
         mContentAtTime2Day1.add("Coffee Break");
-        mTimeLineContentMap1.put(2, mContentAtTime2Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(2), mContentAtTime2Day1);
 
         List<String> mContentAtTime3Day1 = new ArrayList<>();
         mContentAtTime3Day1.add("E-MIMO Workshop-1" + "\n" + "(Boya Meeting Room)");
@@ -75,11 +75,11 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime3Day1.add("Tutorial#2" + "\n" + "(Maesai Reception Hall 1)");
         mContentAtTime3Day1.add("Tutorial#5" + "\n" + "(Maesai Reception Hall 2)");
         mContentAtTime3Day1.add("Tutorial#9" + "\n" + "(Brunei Meeting Room)");
-        mTimeLineContentMap1.put(3, mContentAtTime3Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(3), mContentAtTime3Day1);
 
         List<String> mContentAtTime4Day1 = new ArrayList<>();
         mContentAtTime4Day1.add("Lunch");
-        mTimeLineContentMap1.put(4, mContentAtTime4Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(4), mContentAtTime4Day1);
 
         List<String> mContentAtTime5Day1 = new ArrayList<>();
         mContentAtTime5Day1.add("Tutorial#3" + "\n" + "(Boya Meeting Room)");
@@ -88,11 +88,11 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime5Day1.add("Tutorial#4" + "\n" + "(Maesai Reception Hall 1)");
         mContentAtTime5Day1.add("Tutorial#7" + "\n" + "(Maesai Reception Hall 2)");
         mContentAtTime5Day1.add("Tutorial#8" + "\n" + "(Brunei Meeting Room)");
-        mTimeLineContentMap1.put(5, mContentAtTime5Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(5), mContentAtTime5Day1);
 
         List<String> mContentAtTime6Day1 = new ArrayList<>();
         mContentAtTime6Day1.add("Coffee Break");
-        mTimeLineContentMap1.put(6, mContentAtTime6Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(6), mContentAtTime6Day1);
 
         List<String> mContentAtTime7Day1 = new ArrayList<>();
         mContentAtTime7Day1.add("Tutorial#3" + "\n" + "(Boya Meeting Room)");
@@ -101,12 +101,12 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime7Day1.add("Tutorial#4" + "\n" + "(Maesai Reception Hall 1)");
         mContentAtTime7Day1.add("Tutorial#7" + "\n" + "(Maesai Reception Hall 2)");
         mContentAtTime7Day1.add("Tutorial#8" + "\n" + "(Brunei Meeting Room)");
-        mTimeLineContentMap1.put(7, mContentAtTime7Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(7), mContentAtTime7Day1);
 
 
         List<String> mContentAtTime8Day1 = new ArrayList<>();
         mContentAtTime8Day1.add("Reception");
-        mTimeLineContentMap1.put(8, mContentAtTime8Day1);
+        mTimeLineContentMap1.put(mTimeLine1.get(8), mContentAtTime8Day1);
         //********************************************
 
         //day2 data
@@ -123,25 +123,25 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mTimeLine2.add("18:30-21:00");
 
 
-        mTimeLineContentMap2=new HashMap<Integer, List<String>>();
+        mTimeLineContentMap2=new HashMap<>();
         List<String> mContentAtTime0Day2 = new ArrayList<>();
         mContentAtTime0Day2.add("Conference Registration");
-        mTimeLineContentMap2.put(0,mContentAtTime0Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(0),mContentAtTime0Day2);
 
 
         List<String> mContentAtTime1Day2 = new ArrayList<>();
         mContentAtTime1Day2.add("Welcome Opening"+"\n"+"(Wufu Hall)");
-        mTimeLineContentMap2.put(1,mContentAtTime1Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(1),mContentAtTime1Day2);
 
         List<String> mContentAtTime2Day2 = new ArrayList<>();
         mContentAtTime2Day2.add("keynote Speech #1"+"\n"+"(Wufu Hail)");
         mContentAtTime2Day2.add("keynote Speech #2"+"\n"+"(Wufu Hail)");
-        mTimeLineContentMap2.put(2,mContentAtTime2Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(2),mContentAtTime2Day2);
 
 
         List<String> mContentAtTime3Day2 = new ArrayList<>();
         mContentAtTime3Day2.add("Coffee Break & Poster Session-1");
-        mTimeLineContentMap2.put(3,mContentAtTime3Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(3),mContentAtTime3Day2);
 
 
         List<String> mContentAtTime4Day2 = new ArrayList<>();
@@ -151,12 +151,12 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime4Day2.add("IAP"+"\n"+"(Brunei Meeting Room)");
         mContentAtTime4Day2.add("Invited-1"+"\n"+"(Sentosa Meeting Room)");
         mContentAtTime4Day2.add("Invited-2"+"\n"+"(International Conference Hall)");
-        mTimeLineContentMap2.put(4,mContentAtTime4Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(4),mContentAtTime4Day2);
 
 
         List<String> mContentAtTime5Day2 = new ArrayList<>();
         mContentAtTime5Day2.add("Lunch");
-        mTimeLineContentMap2.put(5,mContentAtTime5Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(5),mContentAtTime5Day2);
 
 
         List<String> mContentAtTime6Day2 = new ArrayList<>();
@@ -167,12 +167,12 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime6Day2.add("Invited-3"+"\n"+"(Sentosa Meeting Room)");
         mContentAtTime6Day2.add("Invited-4"+"\n"+"(International Conference Hall)");
         mContentAtTime6Day2.add("Steering Committee Meeting"+"\n"+"(Maesai Reception Hall 1)");
-        mTimeLineContentMap2.put(6,mContentAtTime6Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(6),mContentAtTime6Day2);
 
 
         List<String> mContentAtTime7Day2 = new ArrayList<>();
         mContentAtTime7Day2.add("Coffee Break");
-        mTimeLineContentMap2.put(7,mContentAtTime7Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(7),mContentAtTime7Day2);
 
 
         List<String> mContentAtTime8Day2 = new ArrayList<>();
@@ -183,12 +183,12 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime8Day2.add("NGN-3"+"\n"+"(Sentosa Meeting Room)");
         //mContentAtTime8Day2.add("Invited-4"+"\n"+"(International Conference Hall)");
         mContentAtTime8Day2.add("Steering Committee Meeting"+"\n"+"(Maesai Reception Hall 1)");
-        mTimeLineContentMap2.put(8,mContentAtTime8Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(8),mContentAtTime8Day2);
 
 
         List<String> mContentAtTime9Day2 = new ArrayList<>();
         mContentAtTime9Day2.add("Banquet");
-        mTimeLineContentMap2.put(9,mContentAtTime9Day2);
+        mTimeLineContentMap2.put(mTimeLine2.get(9),mContentAtTime9Day2);
         //***********************************8**************
 
         //day3 data
@@ -202,20 +202,20 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mTimeLine3.add("15:30-16:00");
         mTimeLine3.add("16:00-17:30");
 
-        mTimeLineContentMap3=new HashMap<Integer, List<String>>();
+        mTimeLineContentMap3=new HashMap<>();
 
         List<String> mContentAtTime0Day3 = new ArrayList<>();
         mContentAtTime0Day3.add("Conference Registration");
-        mTimeLineContentMap3.put(0,mContentAtTime0Day3);
+        mTimeLineContentMap3.put(mTimeLine3.get(0),mContentAtTime0Day3);
 
         List<String> mContentAtTime1Day3 = new ArrayList<>();
         mContentAtTime1Day3.add("Keynote Speech #3"+"\n"+"(Wufu Hall)");
         mContentAtTime1Day3.add("Keynote Speech #4"+"\n"+"(Wufu Hall)");
-        mTimeLineContentMap3.put(1,mContentAtTime1Day3);
+        mTimeLineContentMap3.put(mTimeLine3.get(1),mContentAtTime1Day3);
 
         List<String> mContentAtTime2Day3 = new ArrayList<>();
         mContentAtTime2Day3.add("Coffee Break & Poster Session-2");
-        mTimeLineContentMap3.put(2,mContentAtTime2Day3);
+        mTimeLineContentMap3.put(mTimeLine3.get(2),mContentAtTime2Day3);
 
         List<String> mContentAtTime3Day3 = new ArrayList<>();
         mContentAtTime3Day3.add("WNM-1"+"\n"+"(Boya Meeting Room)");
@@ -223,12 +223,12 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime3Day3.add("Invited-5"+"\n"+"(Sentosa Meeting Room)");
         mContentAtTime3Day3.add("SNBD-1"+"\n"+"(Maesai Reception Hall 1)");
         mContentAtTime3Day3.add("PSC-1"+"\n"+"(Maesai Reception Hall 2)");
-        mTimeLineContentMap3.put(3,mContentAtTime3Day3);
+        mTimeLineContentMap3.put(mTimeLine3.get(3),mContentAtTime3Day3);
 
 
         List<String> mContentAtTime4Day3 = new ArrayList<>();
         mContentAtTime4Day3.add("Lunch");
-        mTimeLineContentMap3.put(4,mContentAtTime4Day3);
+        mTimeLineContentMap3.put(mTimeLine3.get(4),mContentAtTime4Day3);
 
         List<String> mContentAtTime5Day3 = new ArrayList<>();
         mContentAtTime5Day3.add("WNM-5"+"\n"+"(Boya Meeting Room)");
@@ -236,48 +236,33 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mContentAtTime5Day3.add("STC-1"+"\n"+"(Hongda Meeting Room)");
         mContentAtTime5Day3.add("OCSN-1"+"\n"+"(Maesai Reception Hall 1)");
         mContentAtTime5Day3.add("PSC-2"+"\n"+"(Maesai Reception Hall 2)");
-        mTimeLineContentMap3.put(5,mContentAtTime5Day3);
+        mTimeLineContentMap3.put(mTimeLine3.get(5),mContentAtTime5Day3);
 
 
         List<String> mContentAtTime6Day3 = new ArrayList<>();
         mContentAtTime6Day3.add("Coffee Break");
-        mTimeLineContentMap3.put(6,mContentAtTime6Day3);
+        mTimeLineContentMap3.put(mTimeLine3.get(6),mContentAtTime6Day3);
 
         List<String> mContentAtTime7Day3 = new ArrayList<>();
-        mContentAtTime5Day3.add("WCS-6"+"\n"+"(Boya Meeting Room)");
-        mContentAtTime5Day3.add("WCS-7"+"\n"+"(Brunei Meeting Room)");
-        mContentAtTime5Day3.add("STC-2"+"\n"+"(Hongda Meeting Room)");
-        mContentAtTime5Day3.add("OCSN-2"+"\n"+"(Maesai Reception Hall 1)");
-        mTimeLineContentMap3.put(7,mContentAtTime7Day3);
+        mContentAtTime7Day3.add("WCS-6"+"\n"+"(Boya Meeting Room)");
+        mContentAtTime7Day3.add("WCS-7"+"\n"+"(Brunei Meeting Room)");
+        mContentAtTime7Day3.add("STC-2"+"\n"+"(Hongda Meeting Room)");
+        mContentAtTime7Day3.add("OCSN-2"+"\n"+"(Maesai Reception Hall 1)");
+        mTimeLineContentMap3.put(mTimeLine3.get(7),mContentAtTime7Day3);
 
-
-
-
-
-
-
-        mTimeLineContent = new ArrayList<>();
-        mTimeLineContent.add("test");
-        mTimeLineContent.add("test");
-        mTimeLineContent.add("test");
-        mTimeLineContent.add("test");
-        mTimeLineContent.add("test");
-        mTimeLineContent.add("test");
-        mTimeLineContent.add("test");
-        mTimeLineContent.add("test");
 
 
         mList = new ArrayList<>();
-        mListViewDay1 = (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
-        mListViewDay1.setAdapter(new ItemListViewAdapter(mContext, mTimeLine1, mTimeLineContentMap1));
-        mListViewDay2 = (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
-        mListViewDay2.setAdapter(new ItemListViewAdapter(mContext, mTimeLine2, mTimeLineContentMap2));
-        mListViewDay3 = (ListView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
-        mListViewDay3.setAdapter(new ItemListViewAdapter(mContext, mTimeLine3, mTimeLineContentMap3));
+        mListViewDay1 = (RecyclerView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
+        //mListViewDay1.setAdapter(new ItemListViewAdapter(mContext, mTimeLine1, mTimeLineContentMap1));
+        mListViewDay2 = (RecyclerView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
+       // mListViewDay2.setAdapter(new ItemListViewAdapter(mContext, mTimeLine2, mTimeLineContentMap2));
+        mListViewDay3 = (RecyclerView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
+        //mListViewDay3.setAdapter(new ItemListViewAdapter(mContext, mTimeLine3, mTimeLineContentMap3));
 
-        mList.add(mListViewDay1);
-        mList.add(mListViewDay2);
-        mList.add(mListViewDay3);
+        //mList.add(mListViewDay1);
+        //mList.add(mListViewDay2);
+        //mList.add(mListViewDay3);
     }
 
     @Override
