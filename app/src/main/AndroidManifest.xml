@@ -65,6 +65,14 @@
         <activity
             android:name=".qpf.WayToHotelActivity"
             android:label="@string/title_activity_way_to_hotel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.MapOfHotelActivity"
+            android:label="@string/title_activity_map_of_hotel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.HotelsAroundActivity"
+            android:label="@string/title_activity_hotels_around"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

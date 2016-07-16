@@ -66,10 +66,24 @@
     </string>
     <string name="title_activity_committee_main">Committee</string>
     <string name="title_activity_maps">Maps</string>
-    <string name="title_activity_way_to_hotel">WayToHotelActivity</string>
+    <string name="title_activity_way_to_hotel">Way To Hotel</string>
     <string name="way_from_airport_title">FROM Chengdu Shuangliu International Airport</string>
+    <string name="way_from_airport_content">Taxi: It takes about 29 minutes from Shuangliu International Airport to Wang Jiang Hotel by taxi, costing about 45RMB.\n
+                                            Public Transport: You can also take Airport Bus Line 2 from Shuangliu International Airport stop to Tianfu Square stop.
+                                            Then take metro line 2 to Dongda Road stop and walk around 800m to the hotel.
+    </string>
     <string name="way_from_east_railway_title">FROM Chengdu East Railway Station</string>
+    <string name="way_from_east_railway_content">Taxi: It takes about 13 minutes from Chengdu East Railway Station to Wang Jiang Hotel by taxi, costing about 15RMB.\n
+                                                Public Transport: You can also take metro line 2 from Chengdu East Railway Station to Dongda Road stop and walk
+                                                around 800m to the hotel.
+    </string>
     <string name="way_from_railway_title">FROM Chengdu Railway Station</string>
+    <string name="way_from_railway_content">Taxi: It takes about 21 minutes from Chengdu Railway Station to Wang Jiang Hotel by taxi, costing about 24RMB.\n
+                                            Public Transport: You can also take metro line 1 from Chengdu Railway Station to Tianfu Square stop,
+                                            then change to the metro line 2 to Dongda Road stop and walk around 800m to the hotel.
+    </string>
+    <string name="title_activity_map_of_hotel">Map Of Hotel</string>
+    <string name="title_activity_hotels_around">Hotels Around</string>
 
 
 </resources>

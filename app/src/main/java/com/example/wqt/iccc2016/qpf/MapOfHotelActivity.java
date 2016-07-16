@@ -1,6 +1,5 @@
 package com.example.wqt.iccc2016.qpf;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,61 +8,34 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
 
-public class MapsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class MapOfHotelActivity extends AppCompatActivity {
 
-    private String[] mList;
-    private ListView mListView;
-    private ImageView mWelcomeImage;
     private TextView mToolbarTitle;
+    private TextView mTitle;
+    private ImageView mImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_map_of_hotel);
         initView();
-        mList=getResources().getStringArray(R.array.map_list);
-        mListView.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mList));
-        mListView.setOnItemClickListener(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.maps_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.map_of_hotel_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
     }
 
     private void initView() {
-        mWelcomeImage=(ImageView) findViewById(R.id.maps_head_image);
-        mToolbarTitle= (TextView) findViewById(R.id.maps_toolbar_title);
-        mListView=(ListView) findViewById(R.id.lv_maps);
-
+        mToolbarTitle= (TextView) findViewById(R.id.map_of_hotel_toolbar_title);
+        mTitle=(TextView) findViewById(R.id.tv_map_of_hotel_title);
+        mImage=(ImageView) findViewById(R.id.iv_map_of_hotel);
     }
-
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        switch (i)
-        {
-            case 0:
-                Intent intentWayToHotel=new Intent(this,WayToHotelActivity.class);
-                startActivity(intentWayToHotel);
-                break;
-            case 1:
-                Intent intentMapOfHotel=new Intent(this,MapOfHotelActivity.class);
-                startActivity(intentMapOfHotel);
-                break;
-            case 2:;
-                Intent intentHotelsAround=new Intent(this,HotelsAroundActivity.class);
-                startActivity(intentHotelsAround);
-                break;
-        }
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
