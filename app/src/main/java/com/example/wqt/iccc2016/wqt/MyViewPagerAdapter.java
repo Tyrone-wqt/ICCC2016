@@ -254,11 +254,14 @@ public class MyViewPagerAdapter extends PagerAdapter {
 
         mList = new ArrayList<>();
         mListViewDay1 = (RecyclerView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
+        mListViewDay1.setAdapter(new ProgramAdapter(mContext,mTimeLine1,mTimeLineContentMap1));
         //mListViewDay1.setAdapter(new ItemListViewAdapter(mContext, mTimeLine1, mTimeLineContentMap1));
         mListViewDay2 = (RecyclerView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
+        mListViewDay2.setAdapter(new ProgramAdapter(mContext,mTimeLine2,mTimeLineContentMap3));
        // mListViewDay2.setAdapter(new ItemListViewAdapter(mContext, mTimeLine2, mTimeLineContentMap2));
         mListViewDay3 = (RecyclerView) mLayoutInflater.inflate(R.layout.child_view_in_viewpager, null);
         //mListViewDay3.setAdapter(new ItemListViewAdapter(mContext, mTimeLine3, mTimeLineContentMap3));
+        mListViewDay3.setAdapter(new ProgramAdapter(mContext,mTimeLine3,mTimeLineContentMap3));
 
         //mList.add(mListViewDay1);
         //mList.add(mListViewDay2);
