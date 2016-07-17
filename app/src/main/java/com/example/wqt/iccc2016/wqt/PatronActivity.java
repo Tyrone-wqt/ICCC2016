@@ -31,6 +31,18 @@ public class PatronActivity extends AppCompatActivity {
         mTextHuaweiWeb.setText(Html.fromHtml(mHuaweiWebLink,null,null));
         //RecyclerView view=new RecyclerView(this);
 
+        //mPatron1 = (TextView) findViewById(R.id.patron_icon1);
+        //mPatron2 = (TextView) findViewById(R.id.patron_icon2);
+        //mPatron3 = (TextView) findViewById(R.id.patron_icon3);
+        //mPatron4 = (TextView) findViewById(R.id.patron_icon4);
+        //mPatron5 = (TextView) findViewById(R.id.patron_icon5);
+
+        //Typeface mTypeface = Typeface.createFromAsset(getAssets(), "iconfont/iconfont.ttf");
+        //mPatron2.setTypeface(mTypeface);
+        //mPatron1.setTypeface(mTypeface);
+        //mPatron3.setTypeface(mTypeface);
+        //mPatron4.setTypeface(mTypeface);
+        //mPatron5.setTypeface(mTypeface);
 
     }
 
