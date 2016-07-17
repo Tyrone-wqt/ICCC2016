@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.wqt.iccc2016.wqt.ProgramActivity"
+    tools:showIn="@layout/activity_program">
 
 
     <LinearLayout
         android:id="@+id/program_content_layout"
-        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingTop="8dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.example.wqt.iccc2016.wqt.ProgramActivity"
-        tools:showIn="@layout/activity_program">
+        android:visibility="invisible">
 
         <com.example.wqt.iccc2016.wqt.Radio.SegmentedRadioGroup
             android:id="@+id/segment_text"
@@ -40,7 +39,7 @@
                 android:minWidth="60dip"
                 android:text="July 27"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorRadio"/>
+                android:textColor="@color/colorRadio" />
 
             <RadioButton
                 android:id="@+id/radio_button_middle"
@@ -52,7 +51,7 @@
                 android:minWidth="60dip"
                 android:text="July 28"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorRadio"/>
+                android:textColor="@color/colorRadio" />
 
             <RadioButton
                 android:id="@+id/radio_button_right"
@@ -64,15 +63,14 @@
                 android:minWidth="60dip"
                 android:text="July 29"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorRadio"/>
+                android:textColor="@color/colorRadio" />
         </com.example.wqt.iccc2016.wqt.Radio.SegmentedRadioGroup>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorDividerBg"
-            />
+            android:background="@color/colorBlack" />
 
         <android.support.v4.view.ViewPager
 
@@ -86,10 +84,10 @@
     </LinearLayout>
 
     <ProgressBar
-        android:layout_gravity="center"
-        style="?android:attr/progressBarStyleLargeInverse"
         android:id="@+id/program_progress_bar"
+        style="?android:attr/progressBarStyleLargeInverse"
         android:layout_width="120dp"
-        android:layout_height="120dp"/>
+        android:layout_height="120dp"
+        android:layout_gravity="center" />
 
 </FrameLayout>
