@@ -1,47 +1,33 @@
 package com.example.wqt.iccc2016;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.example.wqt.iccc2016.qpf.CommitteeActivity;
 import com.example.wqt.iccc2016.qpf.VersionActivity;
 import com.example.wqt.iccc2016.qpf.WelcomeActivity;
-import com.example.wqt.iccc2016.wqt.DBHelper.DBManager;
 import com.example.wqt.iccc2016.wqt.HotelAndTravelActivity;
 import com.example.wqt.iccc2016.wqt.MyGridViewAdapter;
 import com.example.wqt.iccc2016.wqt.PatronActivity;
 import com.example.wqt.iccc2016.wqt.ProgramActivity;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    private static final String filePath = "data/data/com.example.wqt.iccc2016/databases/data.db";
-    private static final String pathStr = "data/data/com.example.wqt.iccc2016/databases";
-    private final int BUFFER_SIZE = 4096;
+    //private static final String filePath = "data/data/com.example.wqt.iccc2016/databases/data.db";
+    //private static final String pathStr = "data/data/com.example.wqt.iccc2016/databases";
+    //private final int BUFFER_SIZE = 4096;
     GridView mGridView;
 
     int[] mGridViewImageIds = new int[]{R.string.icon_font_welcome, R.string.icon_font_program, R.string.icon_font_map, R.string.icon_font_patrons, R.string.icon_font_commitee, R.string.icon_font_hotel_and_travel, R.string.icon_font_message, R.string.icon_font_version_update};
 
     String[] mGridViewTextStrings = new String[]{"Welcome", "Program", "Map", "Patrons", "Commitee", "Hotel/Travel", "Messages", "Version Update"};
 
-    ProgressBar mProgressBar;
+    //ProgressBar mProgressBar;
 
-    Handler mHandler;
+    //Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,39 +37,39 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         MyGridViewAdapter mAdapter = new MyGridViewAdapter(this, mGridViewImageIds, mGridViewTextStrings);
         mGridView.setAdapter(mAdapter);
         mGridView.setOnItemClickListener(this);
-        mProgressBar = (ProgressBar) findViewById(R.id.main_progress);
-        final SharedPreferences mSharedPreference = this.getSharedPreferences("firstSetting", Context.MODE_PRIVATE);
-        boolean isBdCopied = mSharedPreference.getBoolean("isDbCopied", false);
-        if (isBdCopied == false) {
-            copyDb();
-        }else{
-            mProgressBar.setVisibility(View.INVISIBLE);
-            mGridView.setVisibility(View.VISIBLE);
-        }
-        mHandler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
+        //mProgressBar = (ProgressBar) findViewById(R.id.main_progress);
+        //final SharedPreferences mSharedPreference = this.getSharedPreferences("firstSetting", Context.MODE_PRIVATE);
+        //boolean isBdCopied = mSharedPreference.getBoolean("isDbCopied", false);
+        //if (isBdCopied == false) {
+        //    copyDb();
+        //}else{
+        //    mProgressBar.setVisibility(View.INVISIBLE);
+        //    mGridView.setVisibility(View.VISIBLE);
+        //}
+        //mHandler = new Handler() {
+        //    @Override
+        //    public void handleMessage(Message msg) {
                 //super.handleMessage(msg);
-                if (msg.what == 0x01) {
-                    mProgressBar.setVisibility(View.INVISIBLE);
-                    mGridView.setVisibility(View.VISIBLE);
-                    mSharedPreference.edit().putBoolean("firstSetting",true).commit();
-                    System.out.println("success");
-                }else if(msg.what==0x02){
-                    mProgressBar.setVisibility(View.INVISIBLE);
-                    mGridView.setVisibility(View.VISIBLE);
-                    Toast.makeText(MainActivity.this,"Database replication failed",Toast.LENGTH_LONG);
-                    System.out.println("fail");
-                }
-            }
-        };
+        //        if (msg.what == 0x01) {
+         //           mProgressBar.setVisibility(View.INVISIBLE);
+        //            mGridView.setVisibility(View.VISIBLE);
+        //            mSharedPreference.edit().putBoolean("firstSetting",true).commit();
+        //            System.out.println("success");
+          //      }else if(msg.what==0x02){
+          //          mProgressBar.setVisibility(View.INVISIBLE);
+         //           mGridView.setVisibility(View.VISIBLE);
+         //           Toast.makeText(MainActivity.this,"Database replication failed",Toast.LENGTH_LONG);
+         //           System.out.println("fail");
+        //        }
+         //   }
+        //};
         //DBManager mDBManager = new DBManager();
         //mDBManager.openDatabase(this);
         //mDBManager.closeDatabase();
         //mProgressBar.setVisibility(View.INVISIBLE);
         //mGridView.setVisibility(View.VISIBLE);
     }
-
+    /*
     private void copyDb() {
         new Thread(new Runnable() {
             @Override
@@ -139,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         }).start();
     }
+    */
 
 
     @Override

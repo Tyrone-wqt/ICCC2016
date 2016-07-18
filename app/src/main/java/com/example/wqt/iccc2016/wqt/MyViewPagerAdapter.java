@@ -256,8 +256,8 @@ public class MyViewPagerAdapter extends PagerAdapter {
         mTimeLineContentMap3.put(mTimeLine3.get(4), mContentAtTime4Day3);
 
         List<String> mContentAtTime5Day3 = new ArrayList<>();
-        mContentAtTime5Day3.add("WNM-5");
-        mContentAtTime5Day3.add("SPC-5");
+        mContentAtTime5Day3.add("WNM-2");
+        mContentAtTime5Day3.add("WCS-5");
         mContentAtTime5Day3.add("STC-1");
         mContentAtTime5Day3.add("OCSN-1");
         mContentAtTime5Day3.add("PSC-2");
@@ -365,7 +365,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
             return "techprogram";
         else if (mSessionItemText.contains("SNBD"))
             return "techprogram";
-        else if (mSessionItemText.contains("OCGN"))
+        else if (mSessionItemText.contains("OCSN"))
             return "techprogram";
         else if (mSessionItemText.contains("PSC"))
             return "techprogram";
@@ -375,7 +375,6 @@ public class MyViewPagerAdapter extends PagerAdapter {
             return "banquet";
         else
             return null;
-
     }
 
     private String getKeyWord(final String mSessionItemText) {
@@ -403,8 +402,8 @@ public class MyViewPagerAdapter extends PagerAdapter {
             return "OCSN";
         else if (mSessionItemText.contains("PSC"))
             return "PSC";
-        else if (mSessionItemText.contains("SNDB"))
-            return "SNDB";
+        else if (mSessionItemText.contains("SNBD"))
+            return "SNBD";
         else if (mSessionItemText.contains("SPC"))
             return "SPC";
         else if (mSessionItemText.contains("STC"))

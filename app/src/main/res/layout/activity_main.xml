@@ -67,7 +67,7 @@
         android:layout_height="wrap_content">
 
         <GridView
-            android:visibility="invisible"
+
             android:layout_marginTop="13dp"
             android:id="@+id/main_gridView"
             android:layout_width="match_parent"
@@ -77,13 +77,6 @@
             android:numColumns="2"
             android:stretchMode="columnWidth"
             android:verticalSpacing="8dp"></GridView>
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleLargeInverse"
-            android:id="@+id/main_progress"
-            android:layout_gravity="center"
-            android:layout_width="120dp"
-            android:layout_height="120dp" />
 
 
     </FrameLayout>

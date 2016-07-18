@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
@@ -114,7 +115,9 @@ public class ProgramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     }
                 });
             }
-
+            //if(mSessionItemText.equals("Coffee Break")||mSessionItemText.equals("Conference Registration")){
+            //    ((ProgramSessionItemHolder) holder).mImageView.setVisibility(View.INVISIBLE);
+            //}
         }
     }
 
@@ -211,10 +214,11 @@ public class ProgramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     public class ProgramSessionItemHolder extends RecyclerView.ViewHolder {
         public TextView mTextSessionItem;
-
+        public ImageView mImageView;
         public ProgramSessionItemHolder(View itemView) {
             super(itemView);
             mTextSessionItem = (TextView) itemView.findViewById(R.id.program_text_session);
+            mImageView= (ImageView) itemView.findViewById(R.id.program_image_extend);
         }
     }
 

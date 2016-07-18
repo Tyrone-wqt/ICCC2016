@@ -1,33 +1,20 @@
 package com.example.wqt.iccc2016.wqt;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.os.PersistableBundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.wqt.iccc2016.R;
 import com.example.wqt.iccc2016.wqt.Radio.SegmentedRadioGroup;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
 public class ProgramActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener, RadioGroup.OnCheckedChangeListener {
     SegmentedRadioGroup mRadioGroup;
@@ -36,25 +23,26 @@ public class ProgramActivity extends AppCompatActivity implements ViewPager.OnPa
     RadioButton mRadioButtonRight;
     ViewPager mViewPager;
     TextView mToolbarTitle;
-    ProgressBar mProgressBar;
-    Handler mHandler;
+    //ProgressBar mProgressBar;
+    //Handler mHandler;
     LinearLayout mLinearLayout;
 
-    private static final String filePath = "data/data/com.example.wqt.iccc2016/databases/data.db";
-    private static final String pathStr = "data/data/com.example.wqt.iccc2016/databases";
-    private final int BUFFER_SIZE = 4096;
+    //private static final String filePath = "data/data/com.example.wqt.iccc2016/databases/data.db";
+    //private static final String pathStr = "data/data/com.example.wqt.iccc2016/databases";
+    //private final int BUFFER_SIZE = 4096;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_program);
-        mProgressBar = (ProgressBar) findViewById(R.id.program_progress_bar);
+       // mProgressBar = (ProgressBar) findViewById(R.id.program_progress_bar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbarTitle = (TextView) findViewById(R.id.program_toolbar_title);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         mLinearLayout= (LinearLayout) findViewById(R.id.program_content_layout);
+        /*
         final SharedPreferences mSharedPreference = this.getSharedPreferences("firstSetting", Context.MODE_PRIVATE);
         boolean isBdCopied = mSharedPreference.getBoolean("isDbCopied", false);
         if (isBdCopied == false) {
@@ -80,6 +68,7 @@ public class ProgramActivity extends AppCompatActivity implements ViewPager.OnPa
                 }
             }
         };
+        */
         mRadioGroup = (SegmentedRadioGroup) findViewById(R.id.segment_text);
         mRadioGroup.setOnCheckedChangeListener(this);
         mRadioButtonLeft = (RadioButton) findViewById(R.id.radio_button_left);
@@ -94,7 +83,7 @@ public class ProgramActivity extends AppCompatActivity implements ViewPager.OnPa
         mViewPager.setAdapter(myViewPagerAdapter);
 
     }
-
+    /*
     private void copyDb() {
         new Thread(new Runnable() {
             @Override
@@ -150,7 +139,7 @@ public class ProgramActivity extends AppCompatActivity implements ViewPager.OnPa
             }
         }).start();
     }
-
+       */
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

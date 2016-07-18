@@ -3,7 +3,6 @@ package com.example.wqt.iccc2016.wqt;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.Menu;
@@ -77,6 +76,4 @@ public class PatronActivity extends AppCompatActivity {
             mToolbarTitle.setText(title);
         }
     }
-
-
 }
