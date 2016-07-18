@@ -11,8 +11,13 @@
 
         <ImageView
             android:id="@+id/iv_committee_icon"
+<<<<<<< HEAD
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+=======
             android:layout_width="70dp"
             android:layout_height="70dp"
+>>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:src="@drawable/anonymous_icon" />
@@ -24,6 +29,15 @@
 
             <TextView
                 android:id="@+id/tv_committee_name"
+<<<<<<< HEAD
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="bottom|left"
+                android:layout_weight="1"
+                android:text="name"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+=======
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:gravity="bottom"
@@ -31,6 +45,7 @@
                 android:text="name"
                 android:textColor="@color/colorBlack"
                 android:textSize="24sp" />
+>>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
 
             <TextView
                 android:id="@+id/tv_committee_location"
@@ -40,7 +55,11 @@
                 android:layout_weight="1"
                 android:text="location"
                 android:textColor="@color/colorBlack"
+<<<<<<< HEAD
+                android:textSize="16sp" />
+=======
                 android:textSize="20sp" />
+>>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
         </LinearLayout>
     </LinearLayout>
 

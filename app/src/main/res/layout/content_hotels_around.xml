@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.wqt.iccc2016.qpf.HotelsAroundActivity"
+    tools:showIn="@layout/activity_hotels_around">
+    <TextView
+        android:id="@+id/tv_hotels_around_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Hotels around the Conference Venue"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/iv_hotels_around"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/hotels_around" />
+</LinearLayout>

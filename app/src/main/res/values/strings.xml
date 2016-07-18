@@ -66,10 +66,62 @@
     </string>
     <string name="title_activity_committee_main">Committee</string>
     <string name="title_activity_maps">Maps</string>
-    <string name="title_activity_way_to_hotel">WayToHotelActivity</string>
+    <string name="title_activity_way_to_hotel">Way To Hotel</string>
     <string name="way_from_airport_title">FROM Chengdu Shuangliu International Airport</string>
+    <string name="way_from_airport_content">Taxi: It takes about 29 minutes from Shuangliu International Airport to Wang Jiang Hotel by taxi, costing about 45RMB.\n
+                                            Public Transport: You can also take Airport Bus Line 2 from Shuangliu International Airport stop to Tianfu Square stop.
+                                            Then take metro line 2 to Dongda Road stop and walk around 800m to the hotel.
+    </string>
     <string name="way_from_east_railway_title">FROM Chengdu East Railway Station</string>
+    <string name="way_from_east_railway_content">Taxi: It takes about 13 minutes from Chengdu East Railway Station to Wang Jiang Hotel by taxi, costing about 15RMB.\n
+                                                Public Transport: You can also take metro line 2 from Chengdu East Railway Station to Dongda Road stop and walk
+                                                around 800m to the hotel.
+    </string>
     <string name="way_from_railway_title">FROM Chengdu Railway Station</string>
+    <string name="way_from_railway_content">Taxi: It takes about 21 minutes from Chengdu Railway Station to Wang Jiang Hotel by taxi, costing about 24RMB.\n
+                                            Public Transport: You can also take metro line 1 from Chengdu Railway Station to Tianfu Square stop,
+                                            then change to the metro line 2 to Dongda Road stop and walk around 800m to the hotel.
+    </string>
+    <string name="title_activity_map_of_hotel">Map Of Hotel</string>
+    <string name="title_activity_hotels_around">Hotels Around</string>
+<<<<<<< HEAD
+    <string name="title_activity_committee_details">CommitteeDetailsActivity</string>
 
+=======
+>>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
+
+    <!--Committee Name-->
+    <string name="committee_shaoqian_li">Shaoqian Li</string>
+    <string name="committee_xingsheng_zhang">Xingsheng Zhang</string>
+    <string name="committee_wei_zhang">Wei Zhang</string>
+    <string name="committee_meixia_tao">Meixia Tao</string>
+    <string name="committee_hongfang_yu">Hongfang Yu</string>
+    <string name="committee_kun_yang">Kun Yang</string>
+    <string name="committee_shui_yu">Shui Yu</string>
+    <string name="committee_kun_wang">Kun Wang</string>
+    <string name="committee_bin_ma">Bin Ma</string>
+    <string name="committee_bruce">Bruce Worthman</string>
+    <string name="committee_bo_yan">Bo Yan</string>
+    <string name="committee_xiaoyan_huang">Xiaoyan Huang</string>
+    <string name="committee_rongping_lin">Rongping Lin</string>
+    <string name="committee_jingran_lin">Jingran Lin</string>
+    <string name="committee_yue_cao">Yue Cao</string>
+    <string name="committee_geyong_min">Geyong Min</string>
+    <string name="committee_sumei_sun">Sumei Sun</string>
+    <string name="committee_xuming_fang">Xuming Fang</string>
+    <string name="committee_gang_wu">Gang Wu</string>
+    <string name="committee_pingyi_fan">Pingyi Fan</string>
+    <string name="committee_guodong_zhao">Guodong Zhao</string>
+    <string name="committee_fan_wu">Fan Wu</string>
+    <string name="committee_yunkai_wei">Yunkai Wei</string>
+    <string name="committee_xuemin_shen">Xuemin(Sherman)Shen</string>
+    <string name="committee_ke_gong">Ke Gong</string>
+    <string name="committee_zhen_yang">Zhen Yang</string>
+    <string name="committee_khaled">Khaled B. Letaief</string>
+    <string name="committee_kwang">Kwang-Cheng Chen</string>
+    <string name="committee_steve">Steve Weinstein</string>
+    <string name="committee_tong_song">Tong Song</string>
+    <string name="committee_yinghai_zhang">Yinghai Zhang</string>
+    <string name="committee_zhisheng_niu">Zhisheng Niu</string>
 
 </resources>
