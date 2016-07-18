@@ -25,7 +25,10 @@ public class MapOfHotelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_map_of_hotel);
         initView();
 <<<<<<< HEAD
+<<<<<<< HEAD
         mImage.setImageResource(R.drawable.hotel_map);
+=======
+>>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
 =======
 >>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
         Toolbar toolbar = (Toolbar) findViewById(R.id.map_of_hotel_toolbar);

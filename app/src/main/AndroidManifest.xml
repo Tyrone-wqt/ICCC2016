@@ -74,10 +74,13 @@
             android:name=".qpf.HotelsAroundActivity"
             android:label="@string/title_activity_hotels_around"
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".qpf.CommitteeDetailsActivity"
             android:label="@string/title_activity_committee_details"
+=======
+>>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
 =======
 >>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
             android:theme="@style/AppTheme.NoActionBar"></activity>
