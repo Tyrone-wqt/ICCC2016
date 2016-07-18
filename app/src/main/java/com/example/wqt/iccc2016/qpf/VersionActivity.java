@@ -32,6 +32,7 @@ public class VersionActivity extends AppCompatActivity {
 
     private void initView() {
         toolbar = (Toolbar) findViewById(R.id.update_toolbar);
+        mToolbarTitle=(TextView) findViewById(R.id.update_toolbar_title);
         mUpdateImage=(ImageView) findViewById(R.id.img_update);
         mUpdateText=(TextView) findViewById(R.id.tv_update);
     }

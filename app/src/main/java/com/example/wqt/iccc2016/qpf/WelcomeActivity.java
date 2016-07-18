@@ -1,5 +1,6 @@
 package com.example.wqt.iccc2016.qpf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,26 +9,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.wqt.iccc2016.R;
 
-public class WelcomeActivity extends AppCompatActivity
-{
+import java.util.List;
 
+public class WelcomeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
-    private TextView mWelcomeContent;
-    private TextView mWelcomeEnd;
-    private TextView mToolbarTitle;
     private ImageView mWelcomeImage;
+    private TextView mToolbarTitle;
+    private ListView mListView;
+    private String[] mList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         initView();
+        mList=getResources().getStringArray(R.array.welcome_list);
+        mListView.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mList));
+        mListView.setOnItemClickListener(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.welcome_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -35,15 +41,26 @@ public class WelcomeActivity extends AppCompatActivity
 
     }
 
-    private void initView()
-    {
-        mWelcomeImage=(ImageView) findViewById(R.id.welcom_head_image);
+    private void initView() {
+        mWelcomeImage=(ImageView) findViewById(R.id.welcome_head_image);
         mToolbarTitle= (TextView) findViewById(R.id.welcome_toolbar_title);
-        //mWelcomeTitle= (TextView) findViewById(R.id.tv_welcome_title);
-        mWelcomeContent= (TextView) findViewById(R.id.tv_welcome_content);
-        mWelcomeEnd= (TextView) findViewById(R.id.tv_welcome_end);
+        mListView=(ListView) findViewById(R.id.lv_welcome);
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        switch (i)
+        {
+            case 0:
+                Intent intentGeneral=new Intent(WelcomeActivity.this,GeneralChairsActivity.class);
+                startActivity(intentGeneral);
+                break;
+            case 1:
+                Intent intentTechnical=new Intent(WelcomeActivity.this,TechnicalProgramChairsActivity.class);
+                startActivity(intentTechnical);
+                break;
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -78,6 +95,4 @@ public class WelcomeActivity extends AppCompatActivity
             mToolbarTitle.setText(title);
         }
     }
-
-
 }

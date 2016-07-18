@@ -27,8 +27,8 @@
             android:name=".wqt.ShowPicActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".qpf.WelcomeActivity"
-            android:label="@string/title_activity_welcome"
+            android:name=".qpf.GeneralChairsActivity"
+            android:label="@string/title_activity_general_chairs"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".qpf.CommitteeActivity"
@@ -37,7 +37,53 @@
         <activity
             android:name=".qpf.VersionActivity"
             android:label="@string/title_activity_version"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.TechnicalProgramChairsActivity"
+            android:label="@string/title_activity_technical_program_chairs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.WelcomeActivity"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.MemberActivity"
+            android:label="@string/title_activity_member"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.TechnicalProgramCommitteeActivity"
+            android:label="@string/title_activity_technical_program_committee"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.CommitteeMainActivity"
+            android:label="@string/title_activity_committee_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.WayToHotelActivity"
+            android:label="@string/title_activity_way_to_hotel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.MapOfHotelActivity"
+            android:label="@string/title_activity_map_of_hotel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.HotelsAroundActivity"
+            android:label="@string/title_activity_hotels_around"
+<<<<<<< HEAD
+<<<<<<< HEAD
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".qpf.CommitteeDetailsActivity"
+            android:label="@string/title_activity_committee_details"
+=======
+>>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
+=======
+>>>>>>> b0004de39cbaf6c06bcfe93e9f775d7d6fdfa085
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
